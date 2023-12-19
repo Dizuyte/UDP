@@ -1,9 +1,11 @@
 /********************************************************
  * * nom : clientUDP.c
- * * Auteur : AF 05/03/2007
- * * version : 0.1
- * * descr : client UDP daytime
+ * * Auteur : Milan Galvani
+ * * version : 0.2
+ * * descr : Client DAYTIME en mode non connecté
  * * licence : GPL
+
+     Compile using : gcc clientUDP.c -o clientUDP
 *********************************************************/
 #include <stdio.h>
 #include <stdlib.h>
