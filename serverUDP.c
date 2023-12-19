@@ -1,9 +1,11 @@
 /********************************************************
- * * nom : serverDaytime.c
- * * Auteur : OpenAI (adapté par ChatGPT)
+ * * nom : serverUDP.c
+ * * Auteur : Milan Galvani
  * * version : 0.2
  * * descr : Serveur DAYTIME en mode non connecté
  * * licence : GPL
+
+     Compile using : gcc serverUDP.c -o serveurUDP
 *********************************************************/
 #include <stdio.h>
 #include <stdlib.h>
