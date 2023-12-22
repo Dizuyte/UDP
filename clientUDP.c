@@ -1,6 +1,6 @@
 /********************************************************
  * * nom : clientUDP.c
- * * Auteur : Milan Galvani
+ * * Auteur : Milan Galvani / NetCo
  * * version : 0.2
  * * descr : Client DAYTIME en mode non connecté
  * * licence : GPL
