@@ -56,6 +56,7 @@ int main(int argc, char **argv) {
     printf("Serveur DAYTIME en écoute sur le port %s\n", argv[1]);
 
     printf("Serveur en attente de connexions...\n");
+    printf("\n");
 
     while (1) {
         // Attente de la réception d'un datagramme
