@@ -1,15 +1,17 @@
 /********************************************************
  * * nom : serverUDP.c
  * * Auteur : Milan Galvani / NetCo
- * * version : 0.2
- * * descr : Serveur DAYTIME en mode non connecté
+ * * version : 0.3
+ * * descr : serveur DAYTIME 
  * * licence : GPL
 
-     Compile using : gcc serverUDP.c -o serveurUDP
+     Compile using : gcc -Wall -o serverUDP serverUDP.c
 *********************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -53,7 +55,8 @@ int main(int argc, char **argv) {
 
     printf("Serveur DAYTIME en écoute sur le port %s\n", argv[1]);
 
-    // Boucle principale du serveur
+    printf("Serveur en attente de connexions...\n");
+
     while (1) {
         // Attente de la réception d'un datagramme
         int bytes_received = recvfrom(sockfd, buffer, sizeof(buffer), 0, (struct sockaddr *)&client_addr, &client_addr_len);
@@ -73,9 +76,11 @@ int main(int argc, char **argv) {
         if (sendto(sockfd, buffer, strlen(buffer), 0, (struct sockaddr *)&client_addr, client_addr_len) < 0) {
             perror("Erreur lors de l'envoi de la réponse");
         }
+
+        printf("Données renvoyées : %s\n", buffer);
     }
 
-    // Fermeture de la socket (cette partie ne sera jamais atteinte dans cet exemple)
+    // Fermeture de la socket 
     close(sockfd);
 
     return 0;
