@@ -1,6 +1,6 @@
 /********************************************************
  * * nom : serverUDP.c
- * * Auteur : Milan Galvani
+ * * Auteur : Milan Galvani / NetCo
  * * version : 0.2
  * * descr : Serveur DAYTIME en mode non connecté
  * * licence : GPL
