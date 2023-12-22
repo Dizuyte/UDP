@@ -79,7 +79,10 @@ int main(int argc, char **argv) {
         }
 
         printf("Données renvoyées : %s\n", buffer);
+        printf("________________________________\n");
+        printf("\n");
     }
+     
 
     // Fermeture de la socket 
     close(sockfd);
